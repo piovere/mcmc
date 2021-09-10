@@ -50,7 +50,7 @@ def nextride():
         elapsed_time += 5
     elapsed_time += ride_wait_times[next_ride-1]
     #if k%10000 == 0:
-    #    print last_ride,"->",next_ride,","
+    #    print(last_ride,"->",next_ride,",")
     last_ride = next_ride
 
 def iterate():
@@ -60,10 +60,10 @@ def iterate():
     while last_ride != 3:
         nextride()
     #if k%10000 == 0:
-    #    print "n"
+    #    print("n")
     
-for k in range(1000):
+for k in range(1000000):
     iterate()
     time_total += elapsed_time
 
-print float(time_total)/float(k+1)
+print(float(time_total)/float(k+1))
